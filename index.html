@@ -19,7 +19,9 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 
 const cities = [];
 
-const prom = fetch(endpoint)
+const prom = fetch(endpoint) /* Метод fetch – это XMLHttpRequest нового поколения. Он предоставляет улучшенный интерфейс для
+                                осуществления запросов к серверу: как по части возможностей и контроля над
+                                 происходящим, так и по синтаксису, так как построен на промисах.*/
         .then(blob => blob.json())
         .then(data => cities.push(...data));
 
